@@ -1,28 +1,44 @@
 body{
     background: #a3001f;
 }
+/*==========Contenedor===================*/
 .contenedor{
     display: flex;
-    width: 700px;
-    height: 450px;
-    margin: 50px auto;
+    flex-direction: column;
     background: black;
-    border-radius: 20px;
+    width: 330px;
+    margin: auto;
+    border-radius: 10px;
     gap: 5px;
-}/*=======Page1============*/
+}
+@media only screen and (min-width: 700px) {
+    /* For tablets: */
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        width: 700px;
+        height: 450px;
+        margin: 50px auto;
+        background: black;
+        border-radius: 20px;
+        gap: 5px;
+    }
+}
+
+/*=======Page1============*/
+
 .media-page{
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width: 50%;
     background-color: tomato;
     border-radius: 10px;
+    gap: 10px;
 }
 .media{
-    width: 220px;
+    width: 200px;
     height: 180px;
-    margin-top: -50px;
     background-color: #a3001f;
     text-align: center;
     border-radius: 10px;
@@ -35,6 +51,35 @@ body{
     display: flex;
     align-items: stretch;
     gap: 10px;
+}
+@media only screen and (min-width: 700px) {
+    /* For tablets: */
+    .media-page{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        background-color: tomato;
+        border-radius: 10px;
+    }
+    .media{
+        width: 220px;
+        height: 180px;
+        margin-top: -50px;
+        background-color: #a3001f;
+        text-align: center;
+        border-radius: 10px;
+        border-style: none;
+    }
+    .frame{
+        margin-top: 15px;
+    }
+    .search-form{
+        display: flex;
+        align-items: stretch;
+        gap: 10px;
+    }
 }
 input{
     background: white;
@@ -56,11 +101,17 @@ button:active{
 }
 /*==========Page2==========*/
 .details-page{
-    width: 50%;
     background: tomato;
     border-radius: 10px;
 }
-
+@media only screen and (min-width: 700px) {
+    /* For tablets: */
+    .details-page{
+        width: 50%;
+        background: tomato;
+        border-radius: 10px;
+    }
+}
 .title{
     text-align: center;
 }
@@ -81,7 +132,7 @@ button:active{
 }
 
 .item .item-titulo{
-    width: 80px;
+    width: 38px;
 }
 
 .item .item-score{
@@ -91,4 +142,17 @@ button:active{
 .item progress{
     width: 200px;
 }
-
+@media only screen and (min-width: 700px) {
+    /* For tablets: */
+    .item .item-titulo{
+        width: 80px;
+    }
+    
+    .item .item-score{
+        width: 41px;
+    }
+    
+    .item progress{
+        width: 150px;
+    }
+}
