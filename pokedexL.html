@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css\style.css" type="text/css">
+    <title>Pokedex LaunchX</title>  
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <div class="media-page">
+            <div class="actions">
+                
+            </div>
+            <div class="media">
+                <div class="frame">
+                    <img src="img\pokeball.png" alt="pokeball" id="pokeImg" width="150px">
+                </div>
+            </div>
+
+            <div class="search-form">
+                <input type="text" placeholder="pikachu" id="pokeName" name="pokeName">
+                <button onclick="fetchPokemon()"></button>
+            </div>
+        </div>
+        <div class="details-page">
+            <div class="title">
+                <h1>Pokedex LaunchX</h1>
+            </div>
+            <div class="stats">
+                <form action="">
+                    <div class="form-estadisticas">
+                        <p>Tipo de pokemon</p><label class="tpokemon" id="tpokemon">Tipo</label>
+                        <p>Estadisticas</p>
+                        <div class="estadisticas">
+                            <div class="item">
+                                <label class="item-titulo">HP</label>
+                                <progress id="sp0" max="200" value="0"></progress>
+                                <label id="s0" class="item-score">0%</label>
+                            </div>
+                            <div class="item">
+                                <label class="item-titulo">Ataque</label>
+                                <progress id="sp1" max="200" value="0"></progress>
+                                <label id="s1" class="item-score">0%</label>
+                            </div>
+                            <div class="item">
+                                <label class="item-titulo">Defensa</label>
+                                <progress id="sp2" max="200" value="0"></progress>
+                                <label id="s2" class="item-score">0%</label>
+                            </div>
+                            <div class="item">
+                                <label class="item-titulo">Atq. Especial</label>
+                                <progress id="sp3" max="200" value="0"></progress>
+                                <label id="s3" class="item-score">0%</label>
+                            </div>
+                            <div class="item">
+                                <label class="item-titulo">Def. Especial</label>
+                                <progress id="sp4" max="200" value="0"></progress>
+                                <label id="s4" class="item-score">0%</label>
+                            </div>
+                            <div class="item">
+                                <label class="item-titulo">Velocidad</label>
+                                <progress id="sp5" max="200" value="0"></progress>
+                                <label id="s5" class="item-score">0%</label>
+                            </div>
+                        </div>
+                        
+                        <p>Movimiento</p><label class="movs" id="movs" for="">E3</label>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<footer>
+    <script src="js\pokedexL.js"></script>
+</footer>
+</html>

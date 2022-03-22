@@ -1,0 +1,94 @@
+body{
+    background: #a3001f;
+}
+.contenedor{
+    display: flex;
+    width: 700px;
+    height: 450px;
+    margin: 50px auto;
+    background: black;
+    border-radius: 20px;
+    gap: 5px;
+}/*=======Page1============*/
+.media-page{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    background-color: tomato;
+    border-radius: 10px;
+}
+.media{
+    width: 220px;
+    height: 180px;
+    margin-top: -50px;
+    background-color: #a3001f;
+    text-align: center;
+    border-radius: 10px;
+    border-style: none;
+}
+.frame{
+    margin-top: 15px;
+}
+.search-form{
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+}
+input{
+    background: white;
+    padding: 12px;
+    width: 235px;
+    border-radius: 5px;
+    border-style: none;
+    text-align: center;
+}
+button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #a3001f;
+    border-style: none;
+}
+button:active{
+    background: green;
+}
+/*==========Page2==========*/
+.details-page{
+    width: 50%;
+    background: tomato;
+    border-radius: 10px;
+}
+
+.title{
+    text-align: center;
+}
+.form-estadisticas{
+    width: 330px;
+    margin: auto;
+}
+
+.tpokemon, .movs{
+    margin-left: 20px;
+}
+.item{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+
+.item .item-titulo{
+    width: 80px;
+}
+
+.item .item-score{
+    width: 30px;
+}
+
+.item progress{
+    width: 200px;
+}
+
