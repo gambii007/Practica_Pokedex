@@ -1,5 +1,5 @@
 body{
-    background: #a3001f;
+    background: #3b010d;
 }
 /*==========Contenedor===================*/
 .contenedor{
@@ -24,9 +24,29 @@ body{
         gap: 5px;
     }
 }
-
+/*=========CirculosStatus==========*/
+.actions{
+    display: flex;
+    width: 80px;
+    height: 20px;
+    background: gray;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin-top: 5px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+.light-status{
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    background-color: #6a6a6a;
+}
+#c2{
+    background: #ce8b09;
+}
 /*=======Page1============*/
-
 .media-page{
     display: flex;
     flex-direction: column;
@@ -37,23 +57,16 @@ body{
     gap: 10px;
 }
 .media{
-    width: 200px;
-    height: 180px;
+    width: 180px;
+    height: 150px;
     background-color: #a3001f;
     text-align: center;
     border-radius: 10px;
-    border-style: none;
-}
-.frame{
-    margin-top: 15px;
-}
-.search-form{
-    display: flex;
-    align-items: stretch;
-    gap: 10px;
+    border-style: solid;
+    border-color: grey;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
 @media only screen and (min-width: 700px) {
-    /* For tablets: */
     .media-page{
         display: inline-flex;
         flex-direction: column;
@@ -72,33 +85,47 @@ body{
         border-radius: 10px;
         border-style: none;
     }
-    .frame{
-        margin-top: 15px;
-    }
-    .search-form{
-        display: flex;
-        align-items: stretch;
-        gap: 10px;
-    }
+}
+/*=======Section list=======*/
+.boton-list{
+    width: 55px;
+    height: 20px;
+    text-align: center;
+    justify-content: center;
+    border-style: none;
+    background: #a3001f;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+}
+/*=======Section Search=======*/
+.search-form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
 }
 input{
     background: white;
-    padding: 12px;
     width: 235px;
+    height: 25px;
     border-radius: 5px;
     border-style: none;
     text-align: center;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
-button{
-    width: 40px;
-    height: 40px;
+.search-form button{
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: #a3001f;
     border-style: none;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
 }
-button:active{
+.search-form button:active{
     background: green;
 }
+
+
 /*==========Page2==========*/
 .details-page{
     background: tomato;

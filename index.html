@@ -13,16 +13,24 @@
     <div class="contenedor">
         <div class="media-page">
             <div class="actions">
-                
+                <div class="light-status" id="c1"></div>
+                <div class="light-status" id="c2"></div>
+                <div class="light-status" id="c3"></div>
             </div>
+            
             <div class="media">
                 <div class="frame">
                     <img src="img\pokeball.png" alt="pokeball" id="pokeImg" width="150px">
                 </div>
             </div>
 
+            <div class="list">
+                <button class="boton-list" id="back" onclick="pokeListd()">←</button>
+                <button class="boton-list" id="next" onclick="pokeListu()">→</button>
+            </div>
+
             <div class="search-form">
-                <input type="text" placeholder="pikachu" id="pokeName" name="pokeName">
+                <input type="text" placeholder="Nombre del Pokemon o #ID" id="pokeName" name="pokeName">
                 <button onclick="fetchPokemon()"></button>
             </div>
         </div>

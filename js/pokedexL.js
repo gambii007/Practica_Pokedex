@@ -1,11 +1,14 @@
 const fetchPokemon = () => {
-    const pokeName = document.getElementById("pokeName")
+    pokeStts('c2');
+    const pokeName = document.getElementById("pokeName");
     let pokeInput = pokeName.value;
+    pokeInput = pokeInput.toLowerCase();
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeInput}`;
     fetch(url).then((res) => {
         if(res.status == "404"){
             console.log(res);
             pokeImage("img/pikadurmiendo.png");
+            pokeStts('c3');
         }else{
             return res.json();
         }
@@ -15,12 +18,62 @@ const fetchPokemon = () => {
         let pokeT = data.types[0].type.name;
         let pokeS = data.stats;
         let pokeM = data.moves[0].move.name;
+        let pokeid = data.id;
+        pokeName.value = pokeid;
         console.log(pokeS);
+        pokeStts('c1');        
         pokeImage(pokeImg);
         pokeType(pokeT);
         pokeStats(pokeS);
         pokeMovs(pokeM);
     })
+}
+
+const pokeStts = (prueba) =>{
+    let ps1 = document.getElementById('c1');
+    let ps2 = document.getElementById('c2');
+    let ps3 = document.getElementById('c3');
+    const pokeStatus = document.getElementById(prueba);
+    switch (prueba) {
+        case 'c1':
+            pokeStatus.style.background = '#04c015';
+            ps2.style.background = '#6a6a6a';
+            ps3.style.background = '#6a6a6a';
+            break;
+        case 'c2':
+            pokeStatus.style.background = '#ce8b09';
+            ps1.style.background = '#6a6a6a';
+            ps3.style.background = '#6a6a6a';
+            break;
+
+        case 'c3':
+            pokeStatus.style.background = '#ff3838';
+            ps1.style.background = '#6a6a6a';
+            ps2.style.background = '#6a6a6a';
+            break;
+    }
+}
+
+const pokeListu = () =>{
+    const check = document.getElementById("pokeName");
+    let pokeInput = pokeName.value;
+    if (pokeInput == '' || pokeInput == 898) {
+        pokeName.value = 1;
+    }else {
+        pokeName.value++;   
+    }
+    fetchPokemon();
+}
+
+const pokeListd = () =>{
+    const check = document.getElementById("pokeName");
+    let pokeInput = pokeName.value;
+    if (pokeInput == '' || pokeInput == 1) {
+        pokeName.value = 898;
+    }else {
+        pokeName.value--;   
+    }
+    fetchPokemon();
 }
 
 const pokeImage = (url) =>{
