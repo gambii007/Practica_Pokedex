@@ -15,11 +15,12 @@ const fetchPokemon = () => {
     }).then((data) => {
         console.log(data);
         let pokeImg = data.sprites.other["official-artwork"].front_default;
-        let pokeT = data.types[0].type.name;
+        let pokeT = data.types;
         let pokeS = data.stats;
         let pokeM = data.moves[0].move.name;
         let pokeid = data.id;
         pokeName.value = pokeid;
+        console.log(pokeT);
         console.log(pokeS);
         pokeStts('c1');        
         pokeImage(pokeImg);
@@ -82,8 +83,18 @@ const pokeImage = (url) =>{
 }
 
 const pokeType = (url) =>{
-    const pokeT = document.getElementById("tpokemon");
-    pokeT.textContent = url;
+    for (let j = 0; j < 2; j++) {
+        const pokeTp = document.getElementById('tpk'+j);
+        if (url[j] == undefined) {
+            pokeTp.style.background = 'tomato';
+            pokeTp.style.color = 'tomato';
+        }else{
+            console.log(url[j].type.name);
+            pokeTp.textContent = url[j].type.name;
+            pokeTp.style.background = '#df0303';
+            pokeTp.style.color = 'black';
+        }
+    }
 }
 
 const pokeStats = (url) =>{

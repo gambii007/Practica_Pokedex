@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
     <title>Pokedex LaunchX</title>  
 </head>
 
@@ -20,7 +23,7 @@
             
             <div class="media">
                 <div class="frame">
-                    <img src="img\pokeball.png" alt="pokeball" id="pokeImg" width="150px">
+                    <img src="img\pokeball.png" alt="pokeball" id="pokeImg">
                 </div>
             </div>
 
@@ -41,7 +44,13 @@
             <div class="stats">
                 <form action="">
                     <div class="form-estadisticas">
-                        <p>Tipo de pokemon</p><label class="tpokemon" id="tpokemon">Tipo</label>
+                        <div>
+                            <p>Tipo de pokemon</p>
+                            <div class="tipo-poke">
+                                <label class="tpokemon" id="tpk0">Tipo1</label>
+                                <label class="tpokemon" id="tpk1">Tipo2</label>
+                            </div>
+                        </div>
                         <p>Estadisticas</p>
                         <div class="estadisticas">
                             <div class="item">
