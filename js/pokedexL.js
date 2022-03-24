@@ -19,7 +19,9 @@ const fetchPokemon = () => {
         let pokeS = data.stats;
         let pokeM = data.moves[0].move.name;
         let pokeid = data.id;
+        let pokenamel = document.getElementById("pokeNameL");
         pokeName.value = pokeid;
+        pokenamel.textContent = data.name;
         console.log(pokeT);
         console.log(pokeS);
         pokeStts('c1');        
@@ -58,7 +60,7 @@ const pokeStts = (prueba) =>{
 const pokeListu = () =>{
     const check = document.getElementById("pokeName");
     let pokeInput = pokeName.value;
-    if (pokeInput == '' || pokeInput == 898) {
+    if (pokeInput == '' || pokeInput == 898 || pokeInput == 'NaN') {
         pokeName.value = 1;
     }else {
         pokeName.value++;   
@@ -69,7 +71,7 @@ const pokeListu = () =>{
 const pokeListd = () =>{
     const check = document.getElementById("pokeName");
     let pokeInput = pokeName.value;
-    if (pokeInput == '' || pokeInput == 1) {
+    if (pokeInput == '' || pokeInput <= 1 || pokeInput == 'NaN') {
         pokeName.value = 898;
     }else {
         pokeName.value--;   
@@ -91,7 +93,7 @@ const pokeType = (url) =>{
         }else{
             console.log(url[j].type.name);
             pokeTp.textContent = url[j].type.name;
-            pokeTp.style.background = '#df0303';
+            pokeTp.style.background = '#a3001f';
             pokeTp.style.color = 'black';
         }
     }
